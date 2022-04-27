@@ -3,9 +3,25 @@
   "version": "1.0.0",
   "description": "Parse your project for documentation coverage and generate beautiful docs sites out of them",
   "main": "index.js",
+  "bin": {
+    "easydocs-coverage-report": "bin/generateCoverageReport.js",
+    "easydocs-build-docs": "bin/buildDocsSite.js"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
+  "type": "module",
   "scripts": {
     "test": "test"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "elliott.sencan",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "doctrine": "^3.0.0",
+    "fs-extra": "^10.1.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.5"
+  }
 }
