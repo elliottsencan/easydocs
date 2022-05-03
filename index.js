@@ -1,7 +1,7 @@
 import { default as generateAst } from "./src/parser/generateAst.js";
 import { default as recursivePathResolver } from "./src/utils/recursivePathResolver.js";
 import { default as processComments } from "./src/parser/processComments.js";
-import { default as generateCoverageReportHashFromAst } from "./src/parser/generateCoverageReportHashFromAst.js";
+import { default as generateCoverageReportFromAst } from "./src/parser/generateCoverageReportFromAst.js";
 import * as path from "path";
 import { default as kebabize } from "./src/utils/kebabize.js";
 
@@ -26,7 +26,7 @@ const generateCoverageReportFromTarget = (config) => {
   const { source} = build;
   recursivePathResolver(source, (filePath, fileName) => {
     const ast = generateAst(filePath);
-    const coverageReport = generateCoverageReportHashFromAst(ast, config);
+    const coverageReport = generateCoverageReportFromAst(ast, config);
     fileMap[fileName] = coverageReport;
   });
 

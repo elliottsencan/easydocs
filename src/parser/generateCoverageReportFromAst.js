@@ -27,7 +27,7 @@ const nodeTypeHandlers = {
   FunctionDeclaration: functionDeclarationHandler,
 };
 
-const generateCoverageReportHashFromAst = (ast, config) => {
+const generateCoverageReportFromAst = (ast, config) => {
   const body = ast.program.body;
   const { coverage } = config;
   const { required } = coverage;
@@ -52,4 +52,4 @@ const generateCoverageReportHashFromAst = (ast, config) => {
   };
 };
 
-export default generateCoverageReportHashFromAst;
+export default generateCoverageReportFromAst;
