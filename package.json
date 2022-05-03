@@ -1,5 +1,5 @@
 {
-  "name": "easydocs",
+  "name": "@elliottsencan/easydocs",
   "version": "1.0.0",
   "description": "Parse your project for documentation coverage and generate beautiful docs sites out of them",
   "main": "index.js",
