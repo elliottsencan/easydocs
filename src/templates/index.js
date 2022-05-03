@@ -9,15 +9,16 @@ const homepage = ({ meta }, sidebar) => `
         <title>${meta.docsName}</title>
     </head>
     <body>
-        <header>
-        </header>    
-        <div class="main">
-            ${sidebar}
-            <article>
-                <h1>${meta.docsName}</h1>
-                <p>—</p>
-                <p>Authored by <a href="${meta.github}">${meta.author}</a>.</p>
-            </article>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                    ${sidebar}
+                </div>
+                <div class="col py-3"> 
+                    <h3>${meta.docsName}</h3>
+                    <p class="lead">Authored by <a href="${meta.github}">${meta.author}</a>.</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>

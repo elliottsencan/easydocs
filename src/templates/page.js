@@ -9,13 +9,15 @@ const page = ({ meta }, content, sidebar) => `
         <title>${meta.docsName}</title>
     </head>
     <body>
-        <header>
-        </header>    
-        <div class="main">
-            ${sidebar}
-            <article>
-                <pre id="json">${JSON.stringify(content, undefined, 2)}</pre>
-            </article>
+        <div class="container-fluid">
+            <div class="row flex-nowrap">
+                <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                    ${sidebar}
+                </div>
+                <div class="col py-3">            
+                    <pre id="json"><code>${JSON.stringify(content, undefined, 2)}</code></pre>
+                </div>
+            </div>
         </div>
     </body>
 </html>
