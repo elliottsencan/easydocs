@@ -5,7 +5,6 @@ import shell from "shelljs";
 
 const buildIndex = (fileMap, config) => {
   const sideBar = buildSideBar(fileMap);
-  fs.copySync("../assets", `${config.build.target}/assets`);
   fs.writeFileSync(
     `${config.build.target}/index.html`,
     index(config, sideBar),
